@@ -9,9 +9,12 @@
     "test": "ng test"
   },
   "budgets": {
-       "type": "initial",
-       "maximumWarning": "2mb",
-       "maximumError": "5mb"
+    
+      "type": "anyComponentStyle",
+      "maximumWarning": "4kb",
+      "maximumError": "5kb"
+   
+ 
     },
     
   "private": true,
