@@ -2,12 +2,9 @@ import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthConfig, OAuthService } from 'angular-oauth2-oidc';
-import { UserManager } from 'oidc-client';
-import { authConfig } from './autho.service';
-import { HomeComponent } from './home/home.component';
 
-// const ACCESS_TOKEN = 'access_token';
-// const REFRESH_TOKEN ='refresh_token';
+
+
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {

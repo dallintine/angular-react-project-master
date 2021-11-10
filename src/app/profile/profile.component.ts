@@ -15,22 +15,14 @@ export class ProfileComponent implements OnInit {
     this.configureSingleSignOn();
   }
 configureSingleSignOn(){
-    // this.oauthService.configure(authConfig);
     this.oauthService.tokenValidationHandler = new JwksValidationHandler();
     this.oauthService.loadDiscoveryDocumentAndTryLogin();
-    // this.oauthService.loadDiscoveryDocumentAndLogin();
     this.oauthService.setupAutomaticSilentRefresh();
   }
   ngOnInit(): void {
   }
   
-  // login(){
-  //   this.oauthService.initLoginFlow();
-  //   }
   
-  //   logout(){
-  //     this.oauthService.logOut();
-  //   }
   get token(){
     let claims:any = this.oauthService.getIdentityClaims();
     return claims ? claims : null;
